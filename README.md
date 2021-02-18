@@ -1,3 +1,3 @@
 # Portfolio Webtech advanced Silke Rondas
 
-[I'm an inline-style link](https://www.google.com)
+[Lab1](https://github.com/silkerondas/SilkeRondas-2imd-webtechadvanced-portfolio/tree/main/lab1%20-%20git)
