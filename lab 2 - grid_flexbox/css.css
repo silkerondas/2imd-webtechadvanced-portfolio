@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.item {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.item p {
+    text-transform: uppercase;
+}
+
+.red {
+    background-color: #E41451;
+}
+
+.blue {
+    background-color: #88FDEA;
+}
+
+.yellow {
+    background-color: #FCFF0D;
+}
+
+@media (min-width: 500px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
