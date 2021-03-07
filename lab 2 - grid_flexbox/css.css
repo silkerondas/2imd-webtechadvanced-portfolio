@@ -7,16 +7,20 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 0.5em;
 }
 
 .item {
-    text-align: center;
-    margin: 10px;
-    padding: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .item p {
     text-transform: uppercase;
+    text-align: center;
+    
 }
 
 .red {
@@ -35,5 +39,23 @@
     .grid{
         grid-template-columns: 1fr 1fr;
     }
-    
+
+
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+      
+    .blue {
+        grid-column: 3/4;
+        grid-row: 1/4;
+    }
+      
+    .yellow {
+        grid-column: 4/6;
+        grid-row: 2/4;
+    }
+
 }
