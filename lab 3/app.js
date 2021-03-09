@@ -1,12 +1,13 @@
 class Note {
     constructor(title) {
       this.title = title;
+      this.element = this.createElement(title);
       // HINT🤩 this.element = this.createElement(title);
     }
   
     createElement(title) {
       let newNote = document.createElement("li");
-  
+      newNote.addEventListener('click', this.remove.bind(newNote));
       // HINT🤩 newNote.addEventListener('click', this.remove.bind(newNote));
   
       return newNote;
@@ -58,6 +59,7 @@ class Note {
             let text = this.txtTodo.value;
             let note = new Note(text)
             note.add();
+            this.reset();
             console.log(text)
         }
 
@@ -71,6 +73,7 @@ class Note {
   
     reset() {
       // this function should reset the form / clear the text field
+      this.txtTodo.value = "";
     }
   }
   
