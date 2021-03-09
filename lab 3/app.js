@@ -54,8 +54,11 @@ class Note {
     createNote(e) {
 
         if (e.key === "Enter"){
-            console.log("test")
             e.preventDefault();
+            let text = this.txtTodo.value;
+            let note = new Note(text)
+            note.add();
+            console.log(text)
         }
 
       // this function should create a new note by using the Note() class
