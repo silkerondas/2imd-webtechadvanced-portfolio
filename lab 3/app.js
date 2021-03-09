@@ -16,6 +16,7 @@ class Note {
     add() {
       // HINT🤩
       // this function should append the note to the screen somehow
+      console.log("new note")
     }
   
     saveToStorage() {
@@ -60,6 +61,7 @@ class Note {
             let note = new Note(text)
             note.add();
             this.reset();
+            note.saveToStorage();
             console.log(text)
         }
 
