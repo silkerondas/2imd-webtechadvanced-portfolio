@@ -17,6 +17,8 @@ class Note {
       // HINT🤩
       // this function should append the note to the screen somehow
       console.log("new note")
+      let note = document.querySelector("#taskList").appendChild(this.element);
+      note.innerHTML = this.title;
     }
   
     saveToStorage() {
