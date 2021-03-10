@@ -25,7 +25,7 @@ class Note {
       // HINT🤩
       // localStorage only supports strings, not arrays
       // if you want to store arrays, look at JSON.parse and JSON.stringify
-    
+
       note = [];
       note = localStorage.getItem("notes");
       note = JSON.parse(note);
@@ -39,7 +39,15 @@ class Note {
       // in this function, 'this' will refer to the current note element
       // .removeChild(this)
       // remove the item from screen and from localstorage
-     
+
+      document.querySelector("#taskList").removeChild(this);
+      note = localStorage.getItem("notes");
+      note = JSON.parse(note);
+      let title = this.innerHTML;
+      let i = note.indexOf(title);
+      note.splice(i, 1);
+      localStorage.setItem("notes", JSON.stringify(note));
+
     }
   }
   
@@ -58,9 +66,18 @@ class Note {
       // this.loadNotesFromStorage();
     }
   
-    loadNotesFromStorage() {
+    loadNotesFromStorage(note) {
       // HINT🤩
       // load all notes from storage here and add them to the screen
+      if(localStorage.getItem("notes") !== null){
+        let storage = JSON.parse(localStorage.getItem("notes"));
+        for(let i = 0; i < storage.length; i++){
+          let noteStorage = new Note(storage[i]); // storageInput[i] geeft title/inhoud
+          noteStorage.add();
+        }        
+      }
+
+      
     
     }
   
