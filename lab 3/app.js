@@ -21,17 +21,25 @@ class Note {
       note.innerHTML = this.title;
     }
   
-    saveToStorage() {
+    saveToStorage(note) {
       // HINT🤩
       // localStorage only supports strings, not arrays
       // if you want to store arrays, look at JSON.parse and JSON.stringify
+    
+      note = [];
+      note = localStorage.getItem("notes");
+      note = JSON.parse(note);
+      note.push(this.title);
+      localStorage.setItem("notes", JSON.stringify(note));
+      console.log(note);
     }
   
-    remove() {
+    remove(note) {
       // HINT🤩 the meaning of 'this' was set by bind() in the createElement function
       // in this function, 'this' will refer to the current note element
       // .removeChild(this)
       // remove the item from screen and from localstorage
+     
     }
   }
   
@@ -53,6 +61,7 @@ class Note {
     loadNotesFromStorage() {
       // HINT🤩
       // load all notes from storage here and add them to the screen
+    
     }
   
     createNote(e) {
