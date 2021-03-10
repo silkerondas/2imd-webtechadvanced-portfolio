@@ -9,10 +9,29 @@
     
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <header>
             <h1>What's the weather like today</h1>
         </header>
+        <div id="videoDiv">
+            <video autoplay muted loop id="video">
+                <source src="rain.mp4" type="video/mp4">
+              </video>
+            <div id="description">
+                <p> It's rainy in Zemst today</p>
+            </div> 
+            <div id="temp">
+                <p>7°</p>
+            </div>
+        </div>
+        <div id="ad">
+            <div id="text">
+                <p> It's rainy in Zemst today</p>
+            </div>
+            <div id="logo">
+                <img src="nikelogo.png">
+            </div>
+        </div>
     </div>
     <script src='app.js'></script>
 </body>

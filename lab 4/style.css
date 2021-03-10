@@ -4,13 +4,13 @@
   margin: 0;
 }
 body {
-  background-color: #E0F8F7;
+  background-color: #182727;
   font-family: "Open Sans", sans-serif;
 }
 #container {
   color: #999999;
   width: 350px;
-  margin: 50px auto auto auto;
+  margin: 30px auto auto auto;
 }
 
 header {
@@ -30,3 +30,64 @@ header h1 {
   display: inline;
 }
 
+#videoDiv {
+  width: 374px;
+  height: 200px;
+  position: relative;
+  margin-top: 5px;
+}
+
+#video {
+  width: 374px;
+  height: 200px;
+}
+
+#description {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 2em;   
+}
+
+#temp {
+  color: #fff;
+  position: absolute;
+  top: 60px;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 5em;   
+}
+
+#ad {
+  margin-top: 5px;
+  background-size: cover;
+  height: 350px;
+  width: 350px;
+  background-image: url("nike.jpg");
+  border: white solid 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    
+}
+
+
+#text {
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+#ad {
+
+}
+
+img {
+  width: 80px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
