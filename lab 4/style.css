@@ -63,6 +63,7 @@ header h1 {
 #ad {
   margin-top: 5px;
   background-size: cover;
+  background-position: center;
   height: 350px;
   width: 350px;
   background-image: url("nike.jpg");
@@ -89,5 +90,5 @@ header h1 {
 img {
   width: 80px;
   padding-left: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
