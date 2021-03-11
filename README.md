@@ -10,4 +10,4 @@
   
 [lab3](https://github.com/silkerondas/SilkeRondas-2imd-webtechadvanced-portfolio/tree/main/lab%203)
   
-  [TODO APP](https://codesandbox.io/s/todo-app-gqpdj)
+  [TODO APP](https://codesandbox.io/s/todo-app-gqpdj?file=/app.js)
