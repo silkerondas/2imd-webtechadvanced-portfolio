@@ -24,18 +24,21 @@ class App {
                 console.log(json);
                 let place = json.name;
                 let description = json.weather[0].main;
-                this.changeText(place, description)
-
-                if(description ==='Clouds'){
-                    this.getSwimming();
+                this.changeText(place, description);
+                if(description === 'clouds'){
+                    let id = '257'
+                    this.getSport(id);
                 } else {
-                    console.log(description)
+                    let id = '134'
+                    this.getSport(id);
                 }
+                
+                
         });   
     }
 
-    getSwimming() {
-        let url = "https://sports.api.decathlon.com/sports/224";
+    getSport(id) {
+        let url = `https://sports.api.decathlon.com/sports/${id}`;
         fetch(url)
           .then((response) => {
             console.log(url);
@@ -43,19 +46,22 @@ class App {
           })
           .then((json) => {
             console.log(json)
-            let swimming = json.data.attributes.name;
-            this.changeTextSwimming(swimming);
+            let sport = json.data.attributes.name;
+            let image = json.data.relationships.images.data[0].url;
+            console.log(image)
+            this.changeText2(sport, image);
           })
 
     }
+
 
     changeText(place, description) {
         document.querySelector("#text").innerHTML = `${description} in ${place} today`; 
     }
 
-    changeTextSwimming(swimming) {
+    changeText2(swimming, image) {
         document.querySelector("#text2").innerHTML = `Perfect weather to go ${swimming} today`;
-        document.querySelector("#ad").style.backgroundImage = "url(https://www.wigglestatic.com/images/brandpages/2020/Nike/nike-bs-ss20-hero-mob-min.jpg)";
+        document.querySelector("#ad").style.backgroundImage = `url(${image})`;
     }
 }
 
