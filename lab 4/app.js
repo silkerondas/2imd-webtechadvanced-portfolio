@@ -22,18 +22,15 @@ class App {
         })
             .then((json) => {
                 console.log(json);
-
                 let place = json.name;
-                let description = json.weather[0].main
-
+                let description = json.weather[0].main;
                 this.changeText(place, description)
-      });
-        
+        });   
     }
 
     changeText(place, description) {
         document.querySelector("#text").innerHTML = `${description} in ${place} today`;
-      }
+    }
 }
 
 let app = new App();
