@@ -25,11 +25,37 @@ class App {
                 let place = json.name;
                 let description = json.weather[0].main;
                 this.changeText(place, description)
+
+                if(description ==='Clouds'){
+                    this.getSwimming();
+                } else {
+                    console.log(description)
+                }
         });   
     }
 
+    getSwimming() {
+        let url = "https://sports.api.decathlon.com/sports/224";
+        fetch(url)
+          .then((response) => {
+            console.log(url);
+            return response.json();
+          })
+          .then((json) => {
+            console.log(json)
+            let swimming = json.data.attributes.name;
+            this.changeTextSwimming(swimming);
+          })
+
+    }
+
     changeText(place, description) {
-        document.querySelector("#text").innerHTML = `${description} in ${place} today`;
+        document.querySelector("#text").innerHTML = `${description} in ${place} today`; 
+    }
+
+    changeTextSwimming(swimming) {
+        document.querySelector("#text2").innerHTML = `Perfect weather to go ${swimming} today`;
+        document.querySelector("#ad").style.backgroundImage = "url(https://www.wigglestatic.com/images/brandpages/2020/Nike/nike-bs-ss20-hero-mob-min.jpg)";
     }
 }
 

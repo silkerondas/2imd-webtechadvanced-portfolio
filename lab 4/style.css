@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -58,16 +59,15 @@ img {
   padding-bottom: 2px;
 }
 
-#cat {
+#text2 {
   background-color: black;
   height: 75px;
   width: 300px;
-}
-
-#cat p {
   font-size: 20px;
   font-weight: 300;
   color: #fff;
   text-align: center;
-  padding: 15px 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
