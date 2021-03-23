@@ -25,15 +25,18 @@ class App {
                 let place = json.name;
                 let description = json.weather[0].main;
                 this.changeText(place, description);
-                if(description === 'clouds'){
+                
+                if(description === 'Clouds'){
+                    let id = '134'
+                    this.getSport(id);
+                } else if (description === 'Sky is Clear'){
                     let id = '257'
                     this.getSport(id);
                 } else {
-                    let id = '134'
+                    let id = '109'
                     this.getSport(id);
                 }
-                
-                
+    
         });   
     }
 
@@ -54,13 +57,12 @@ class App {
 
     }
 
-
     changeText(place, description) {
         document.querySelector("#text").innerHTML = `${description} in ${place} today`; 
     }
 
-    changeText2(swimming, image) {
-        document.querySelector("#text2").innerHTML = `Perfect weather to go ${swimming} today`;
+    changeText2(sport, image) {
+        document.querySelector("#text2").innerHTML = `Perfect weather to go ${sport} today`;
         document.querySelector("#ad").style.backgroundImage = `url(${image})`;
     }
 }
