@@ -11,5 +11,8 @@
     "url": "(https://github.com/silkerondas/SilkeRondas-2imd-webtechadvanced-portfolio.git)"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.4.0"
+  }
 }
