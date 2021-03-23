@@ -1,0 +1,15 @@
+{
+  "name": "nodejslab",
+  "version": "1.0.0",
+  "description": "lab5 webtech advanced",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/silkerondas/SilkeRondas-2imd-webtechadvanced-portfolio.git)"
+  },
+  "author": "",
+  "license": "ISC"
+}
